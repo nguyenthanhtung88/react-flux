@@ -1,0 +1,51 @@
+{
+  "name": "react-flux",
+  "version": "1.0.0",
+  "description": "trying FLUX workflow",
+  "main": "app.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nguyenthanhtung88/react-flux.git"
+  },
+  "keywords": [
+    "react",
+    "flux",
+    "gulp"
+  ],
+  "browserify": {
+    "transform": [
+      [
+        "reactify",
+        {
+          "es6": true
+        }
+      ]
+    ]
+  },
+  "author": "Tungshooter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nguyenthanhtung88/react-flux/issues"
+  },
+  "homepage": "https://github.com/nguyenthanhtung88/react-flux",
+  "dependencies": {
+    "browser-sync": "^2.5.3",
+    "browserify": "^9.0.7",
+    "flux": "^2.0.1",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sourcemaps": "^1.5.1",
+    "gulp-util": "^3.0.4",
+    "pretty-hrtime": "^1.0.0",
+    "react": "^0.13.1",
+    "react-tap-event-plugin": "^0.1.6",
+    "reactify": "^1.1.0",
+    "require-dir": "^0.3.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.1.0"
+  }
+}
