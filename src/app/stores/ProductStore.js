@@ -1,7 +1,7 @@
 var AppDispatcher = require("../dispatcher/AppDispatcher");
 var EventEmitter = require("events").EventEmitter;
 var FluxCartConstants = require("../constants/FluxCartConstants");
-var merge = require("react/lib/merge");
+var _ = require("underscore");
 
 // Define initial data points
 var _product = {},
@@ -19,7 +19,7 @@ function setSelected(index) {
 }
 
 // Extend ProductStore with EventEmitter to add eventing capabilities
-var ProductStore = merge(EventEmitter.prototype, {
+var ProductStore = _.extend({}, EventEmitter.prototype, {
     // Return Product data
     getProduct: function() {
         return _product;

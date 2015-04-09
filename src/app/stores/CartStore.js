@@ -1,6 +1,7 @@
 var AppDispatcher = require("../dispatcher/AppDispatcher");
 var EventEmitter = require("events").EventEmitter;
 var FluxCartConstants = require("../constants/FluxCartConstants");
+var _ = require("underscore");
 
 // Define initial data points
 var _products = {},
@@ -9,7 +10,7 @@ var _products = {},
 // Add product to cart
 function add(sku, update) {
     update.quantity = sku in _products ? _products[sku].quantity + 1 : 1;
-    _products[sku] = merge(_products[sku], update);
+    _products[sku] = _.extend({}, _products[sku], update);
 }
 
 // Set cart visibility
@@ -23,7 +24,7 @@ function removeItem(sku) {
 }
 
 // Extend Cart Store with EventEmitter to add event capabilities
-var CartStore = merge(EventEmitter.prototyp, {
+var CartStore = _.extend({}, EventEmitter.prototype, {
     // Return cart items
     getCartItems: function() {
         return _products;

@@ -42,7 +42,7 @@ var FluxProduct = React.createClass({
                             })
                         }
                     </select>
-                    <button type="button" onClick={this.addToCart} disabled={ats > 0 ? "" : "disabled"}
+                    <button type="button" onClick={this.addToCart} disabled={ats > 0 ? "" : "disabled"}>
                         {ats > 0 ? "Add To Cart" : "Sold Out"}
                     </button>
                 </div>

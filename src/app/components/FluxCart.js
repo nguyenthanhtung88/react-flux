@@ -42,7 +42,7 @@ var FluxCart = React.createClass({
                             })
                         }
                     </ul>
-                    <span className="total">Total: $(this.props.total)</span>
+                    <span className="total">Total: ${this.props.total}</span>
                 </div>
                 <button type="button" className="view-cart" onClick={this.openCart} disabled={Object.keys(this.props.products).length > 0 ? "" : "disabled"}>View Cart ({this.props.count})</button>
             </div>
